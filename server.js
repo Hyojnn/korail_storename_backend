@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path'); // <--- 경로 모듈 추가
 
 const app = express();  // express 라이브러리 사용한다 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const { Clova } = require('./Clova.js'); // 함수 불러오기
 const { findStoreNameByText } = require('./findStoreNameByText.js'); // 함수 불러오기
