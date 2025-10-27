@@ -17,8 +17,8 @@ const upload = multer({ storage: multer.memoryStorage() });
 app.use(cors());  // cors 미들웨어 사용
 app.use(express.json());  // json 형태로 데이터 주고받기
 
-//3000 포트로 서버 오픈
-app.listen(port, function(){
+// 서버 시작
+app.listen(port, '0.0.0.0', function(){
     console.log(`Server is running on port ${port}`);
 });
 
